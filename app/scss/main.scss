@@ -4,8 +4,228 @@
 @import "global";
 
 /* Main Scss */
+// start header
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 125px;
+  }
+}
+.menu {
+  margin-left: 77px;
+  background-color: #fff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 27px;
+  &__list {
+    display: flex;
+    padding: 15px 46px;
+  }
+  li + li {
+    margin-left: 31px;
+  }
+  &__link {
+    transition: all 0.3s ease-out;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color;
+    font-weight: normal;
+    &:hover {
+      border-bottom: 1px solid $main-color;
+    }
+    &--active {
+      color: $main-color;
+    }
+  }
+}
+.sign-in {
+  color: $main-color;
+  border-color: $main-color;
+  &:hover {
+    color: #fff;
+    background-color: $main-color;
+  }
+}
+.sign-up {
+  margin-left: 10px;
+  background-color: $main-color;
+  color: #fff;
+  &:hover {
+    color: $main-color;
+    background-color: transparent;
+    border-color: $main-color;
+  }
+}
+// end header
 
+// start hero section
+.hero {
+  min-height: 708px;
+  background: #fff;
+  color: #262626;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img {
+    max-width: 725px;
+    width: 100%;
+  }
+  &__content {
+    max-width: 470px;
+    width: 100%;
+    margin-right: 130px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 61px;
+  }
+  &__subtitle {
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+// end hero section
 
+// star about section
+.about {
+  margin-bottom: 150px;
+  min-height: 406px;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    max-width: 704px;
+    width: 100%;
+  }
+  &__content {
+    width: 100%;
+    max-width: 470px;
+    padding-left: 65px;
+  }
+}
+.title {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+}
+.subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $main-color;
+}
+.text {
+  margin-bottom: 50px;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 27px;
+}
+// end about section
+
+// start services section
+.services {
+  margin-bottom: 50px;
+}
+.services__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__content {
+  max-width: 470px;
+}
+.services__items {
+  max-width: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  color: $text-color;
+}
+.services__item {
+  width: 170px;
+  height: 170px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  padding-top: 20px;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:hover {
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  &-title {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+// end services section
+
+// start steps section
+.steps {
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__box {
+    width: 470px;
+    padding-left: 65px;
+  }
+  &__list {
+    margin-left: 80px;
+    color: $text-color;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 55px;
+    counter-increment: item;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: inherit;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      position: absolute;
+      left: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      width: 70px;
+      height: 70px;
+      content: "0"counter(item);
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 2.1;
+      color: $main-color;
+      border: 1px solid $main-color;
+      border-radius: 5px;
+    }
+  }
+  & .title {
+    margin-bottom: 50px;
+  }
+}
+.steps__item:first-child:before{
+background-color: $main-color;
+color: #fff;
+}
+// end steps section
 
 /* Media Query */
 @import "media";
