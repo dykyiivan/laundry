@@ -38,6 +38,18 @@
       color: $main-color;
     }
   }
+  &__mobile {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    span {
+      width: 100%;
+      height: 2px;
+      margin-bottom: 3px;
+      background: $main-color;
+      display: block;
+    }
+  }
 }
 .sign-in {
   color: $main-color;
@@ -71,7 +83,7 @@
   }
   &__img {
     max-width: 725px;
-    width: 100%;
+   background-size: cover;
   }
   &__content {
     max-width: 470px;
@@ -177,6 +189,7 @@
 
 // start steps section
 .steps {
+  margin-bottom: 150px;
   &__inner {
     display: flex;
     align-items: center;
@@ -208,7 +221,7 @@
       text-align: center;
       width: 70px;
       height: 70px;
-      content: "0"counter(item);
+      content: "0" counter(item);
       font-weight: 600;
       font-size: 30px;
       line-height: 2.1;
@@ -221,11 +234,139 @@
     margin-bottom: 50px;
   }
 }
-.steps__item:first-child:before{
-background-color: $main-color;
-color: #fff;
+.steps__item:first-child:before {
+  background-color: $main-color;
+  color: #fff;
 }
 // end steps section
+
+// start app section
+.app {
+  margin-bottom: 150px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 720px;
+  }
+  &__content {
+    max-width: 470px;
+    width: 100%;
+  }
+  &__img {
+    max-width: 470px;
+    width: 100%;
+  }
+}
+.app__links {
+  a + a {
+    margin-left: 20px;
+  }
+}
+// end app section
+
+// start footer
+.footer {
+  background: rgba(25, 65, 145, 0.1);
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  align-items: center;
+  border-top: 1px solid $main-color;
+  opacity: 0.5;
+  &-copyright {
+    font-weight: 300;
+    font-size: 16px;
+    color: #2e2e2e;
+  }
+}
+.payment__icon {
+  display: inline-block;
+  margin-right: 15px;
+}
+.footer__top {
+  display: flex;
+  padding: 60px 0 75px;
+  color: $text-color;
+}
+.footer__col {
+  max-width: 200px;
+  width: 100%;
+  padding-top: 70px;
+}
+.footer__logo {
+  margin-bottom: 10px;
+}
+.footer__col--wide {
+  max-width: 300px;
+  width: 100%;
+  margin-right: 100px;
+  padding-top: 0;
+  p {
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(38, 38, 38, 0.7);
+  }
+}
+.footer__social {
+  display: flex;
+}
+.social__item {
+ margin-right: 10px;
+}
+.social__link  {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  &-linkedin {
+    background-image: url(../images/src/linkedin-icon.svg);
+  }
+  &-twitter {
+    background-image: url(../images/src/twitter-icon.svg);
+  }
+  &-facebook {
+    background-image: url(../images/src/facebook-icon.svg);
+  }
+}
+.footer__col-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer__menu {
+  &-item {
+    margin-bottom: 10px;
+    a {
+      font-size: 16px;
+      transition: all .3s ease;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.footer__col-info {
+  max-width: 160px;
+  width: 100%;
+  margin-left: 115px;
+  address, a {
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+}
+// end footer
 
 /* Media Query */
 @import "media";

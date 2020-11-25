@@ -2,7 +2,7 @@
 
 $(function(){
   
-  // $(".header__menu-mobile").on("click", function(){
-  //   $(".header__menu").toggleClass("active");
-  // });
+  $(".menu__mobile").on("click", function () {
+    $(".menu").toggleClass("active");
+  });
 });
